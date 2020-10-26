@@ -28,9 +28,9 @@ const btnPerder = document.querySelector(".btn-per");
 reglas();
 //jugada usario
 for (let i = 0; i < botones.length; i++) {
-  jugador.classList.remove(botones[i].classList[1]);
-  maquinaBtn.classList.remove(`${jugadaMaquina[numJugada]}`);
 
+  maquinaBtn.classList.remove(`${jugadaMaquina[numJugada]}`);
+  //Seleccion de ficha para jugar
   botones[i].addEventListener("click", () => {
     jugadaUsuario = botones[i].classList[1];
     fichasEleccion.style.display = "none"; //se ocultan los tres botones
@@ -43,6 +43,7 @@ for (let i = 0; i < botones.length; i++) {
       maquinaBtn.classList.add(`${jugadaMaquina[numJugada]}`); //el boton de la máquina le agrego el color
       imgMaquina.setAttribute("src", `images/${jugadaMaquina[numJugada]}.svg`);
       maquinaBtn.classList.add("botonAbrir");
+      //opciones 
       if (
         (jugadaUsuario == "piedra" && jugadaMaquina[numJugada] == "tijera") ||
         (jugadaUsuario == "papel" && jugadaMaquina[numJugada] == "piedra") ||
@@ -101,6 +102,12 @@ function ganarJugar() {
     fichasEleccion.style.display = "flex";
     containerJugada.style.display = "none";
     ganar.style.display = "none";
+    jugador.classList.remove("tijera");
+    jugador.classList.remove("piedra");
+    jugador.classList.remove("papel");
+    maquinaBtn.classList.remove("piedra");
+    maquinaBtn.classList.remove("papel");
+    maquinaBtn.classList.remove("tijera");
   });
 }
 function empatarJugar() {
@@ -108,6 +115,12 @@ function empatarJugar() {
     fichasEleccion.style.display = "flex";
     containerJugada.style.display = "none";
     empatar.style.display = "none";
+    jugador.classList.remove("tijera");
+    jugador.classList.remove("piedra");
+    jugador.classList.remove("papel");
+    maquinaBtn.classList.remove("piedra");
+    maquinaBtn.classList.remove("papel");
+    maquinaBtn.classList.remove("tijera");
   });
 }
 function perderJugar() {
@@ -117,5 +130,11 @@ function perderJugar() {
     perder.style.display = "none";
     contador = 0;
     puntaje.innerHTML = `${contador}`;
+    jugador.classList.remove("tijera");
+    jugador.classList.remove("piedra");
+    jugador.classList.remove("papel");
+    maquinaBtn.classList.remove("piedra");
+    maquinaBtn.classList.remove("papel");
+    maquinaBtn.classList.remove("tijera");
   });
 }
