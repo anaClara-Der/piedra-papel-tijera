@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | piedra, papel o tijera</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/reglas.css">
+  <link rel="stylesheet" href="style/fichasJuego.css">
+  <link rel="stylesheet" href="style/style-Desktop.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+  <main class="container-paginaprincipal">
+  <!--Primera parte puntaje-->
+  <header id="container-puntaje">
+    <img class="img-titulo" src="images/logo.svg" alt="logo: piedra, papel o tijera">
+    <div class="box-puntaje">
+      <span class="tit-puntaje">Puntaje</span>
+      <h2 class="num-puntaje">0</h2>
+    </div>
+  </header>
+<!--Botones de juego-->
+  <section id="container-juego">
+    <div class="fichas-superiores">
+    <button class="boton papel botones-click" ><img class="boton-img" src="images/papel.svg" alt="papel"></button>
+    <button class=" boton tijera botones-click" ><img class="boton-img" src="images/tijera.svg" alt="tijera"></button>
+    </div>
+    <div class="fichas-inferiores">
+      <button class="boton piedra botones-click" ><img class="boton-img" src="images/piedra.svg" alt="piedra"></button>
+    </div>
+  </section>
+  <!--Botones con la jugada y carte de jugar de nuevo-->
+  <div id="container-jugada">
+    <div class="cont-juego">
+    <div class="jugada">
+      <button class="boton btn-jug-usario"><img class="boton-img img-usuario" src="" alt=""></button>
+      <span class="span-jugada">Tu jugada</span>
+    </div>
+  <div class="jugada">
+      <button class="boton color btn-jug-maquina"><img class="boton-img img-maquina" src="images/logo.svg" alt=""></button>
+      <span class="span-jugada">Jugada maquina</span>
+    </div>
+  </div>
+
+    <div class="contenedor-result">
+      <h2 class="text-per-gan"></h2>
+      <button class="btn-jugar btn-per">Play again</button>
+    </div>
+    
+  </div>
+
+</main>
+<!--Boton reglas-->
+<section id="container-reglas">
+  <h2 class="reglas">Reglas</h2>
+</section>
+<!--Reglas cartel desplegable-->
+  <section id="contaiener-desplegable">
+    <h4 class="reglas-desplegable">Reglas</h4>
+    <img src="images/image-rules.svg" alt="reglas">
+    <img class="x-cerrar" src="images/icon-close.svg" alt="cerrar">
+  </section>
+<!--Pie de página-->
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor
+    </footer>
+</div>
+  <script src="js/index.js"></script>
+</body>
+</html>

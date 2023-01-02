@@ -1,0 +1,151 @@
+:root {
+  --scissors: hsl(40, 84%, 53%);
+  --scissorsSombre: #ec9e0e;
+  --paper: hsl(230, 89%, 65%);
+  --paperSombra: hsl(230, 89%, 62%);
+  --rock: hsl(349, 70%, 56%);
+  --rockSombre: hsl(349, 71%, 52%);
+  --lizard: #834fe3;
+  --cyan: linear-gradient(0.25turn, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  --darkText: hsl(229, 25%, 31%);
+  --scoreText: hsl(229, 64%, 46%);
+  --headerOutline: hsl(217, 16%, 45%);
+  --fondo: hsl(237, 49%, 15%);
+  --blanco: #ffffff;
+  --hoverBoton: #cec8c8;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--fondo);
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+.container-paginaprincipal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#container {
+  width: 90%;
+  margin: 25px auto;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#container-puntaje {
+  width: 100%;
+  border: 2px solid var(--headerOutline);
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.img-titulo {
+  width: 100px;
+}
+.box-puntaje {
+  background-color: var(--blanco);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tit-puntaje {
+  color: var(--scoreText);
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.num-puntaje {
+  font-size: 35px;
+}
+/*FICHAS*/
+#container-juego {
+  width: 100%;
+  margin: 40px auto 10px auto;
+  position: relative;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+/*contendor de las fichas*/
+.fichas-superiores {
+  display: flex;
+  justify-content: space-around;
+}
+.fichas-inferiores {
+  display: flex;
+  justify-content: center;
+}
+/* fichas*/
+.boton-img {
+  width: 50px;
+  height: 50px;
+}
+.boton {
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  outline: none;
+}
+.papel {
+  border: 15px solid var(--paper);
+  box-shadow: 0px 0px 19px 6px var(--paper);
+}
+.papel:hover {
+  border: 15px solid var(--paperSombra);
+  box-shadow: 0px 0px 19px 6px var(--paper);
+}
+.tijera {
+  border: 15px solid var(--scissors);
+  box-shadow: 0px 0px 19px 6px var(--scissorsSombre);
+}
+.tijera:hover {
+  border: 15px solid var(--scissorsSombre);
+  box-shadow: 0px 0px 19px 6px var(--scissors);
+}
+.piedra {
+  border: 15px solid var(--rock);
+  box-shadow: 0px 0px 19px 6px var(--rockSombre);
+}
+.piedra:hover {
+  border: 15px solid var(--rockSombre);
+  box-shadow: 0px 0px 19px 6px var(--rock);
+}
+/* REGLAS*/
+#container-reglas {
+  margin: 35px auto;
+  text-align: center;
+}
+.reglas {
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--blanco);
+  font-weight: 100;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: solid 1px var(--blanco);
+  cursor: pointer;
+  letter-spacing: 5px;
+}
+.reglas:hover {
+  background-color: hsl(214, 47%, 23%);
+}
+/*Pie de página*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

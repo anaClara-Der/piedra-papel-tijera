@@ -1,0 +1,17 @@
+@media( min-width: 1024px){
+    #container-puntaje{
+        width: 70%;
+    }
+    .fichas-superiores{
+        justify-content: space-evenly;
+    }
+    .boton{
+        padding: 30px;
+    }
+    .contenedor-result{
+        position: absolute;
+    }
+    .box-puntaje{
+        padding: 20px 30px;
+    }
+}
